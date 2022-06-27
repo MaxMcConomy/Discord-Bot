@@ -100,6 +100,62 @@ public class TicTacToe
         }
     }
 
+    public void pointToPoint(int xa, int ya, int xb, int yb)
+    {
+        String direction = "";
+        if(xa == xb)
+        {
+            //change in x = none
+            direction = "a";
+        }
+        else if(xa > xb)
+        {
+            //change in x = left
+            direction = "b";
+        }
+        else if(xa < xb)
+        {
+            //change in x = right
+            direction = "c"; 
+        }
+
+        if(ya == yb)
+        {
+            //change in y = none
+            direction += "a";
+        }
+        else if(ya > yb)
+        {
+            //change in y = left
+            direction += "b";
+        }
+        else if(ya < yb)
+        {
+            //change in y = right
+            direction += "c";
+        }
+        
+        switch(direction)
+        {
+            case "aa":
+                System.out.println("aa");
+                break;
+            case "ab":
+                //
+                break;
+            case "ac":
+                //
+                break;
+            case "ba":
+                //
+                break;
+            case "bb":
+                //
+                break;
+            // case ""
+        }
+    }
+
     public void getTile()
     {
         
@@ -112,6 +168,6 @@ public class TicTacToe
         }
         int y = Integer.parseInt(next.substring(0, next.indexOf(",")));
         int x = Integer.parseInt(next.substring(next.indexOf(",")+1));
-        field[x+1][y+1] = "\u001B[41m" + characters[26] + "\u001B[0m";
+        field[x+1][y+1] = "\u001B[41m" + characters[26]+ "\u001B[0m";
     }
 }
