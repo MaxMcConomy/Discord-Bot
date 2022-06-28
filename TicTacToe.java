@@ -124,41 +124,85 @@ public class TicTacToe
             //change in y = none
             direction += "a";
         }
-        else if(ya > yb)
-        {
-            //change in y = left
-            direction += "b";
-        }
         else if(ya < yb)
         {
-            //change in y = right
+            //change in y = down
+            direction += "b";
+        }
+        else if(ya > yb)
+        {
+            //change in y = up
             direction += "c";
         }
         
+        int j;
         switch(direction)
         {
             case "aa":
-                System.out.println("aa");
+                //No movement
+                System.out.println("That doesn't ggo anywhere!");
                 break;
             case "ab":
-                //
+                //only down
+                for(int i = ya; i <= yb; i++)
+                {
+                    field[i][xa] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                }
                 break;
             case "ac":
-                //
+                //only up
+                for(int i = ya; i >= yb; i--)
+                {
+                    field[i][xa] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                }
                 break;
             case "ba":
-                //
+                //only left
+                for(int i = xa; i >= xb; i--)
+                {
+                    field[ya][i] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                }
                 break;
             case "bb":
-                //
+                //left and down
                 break;
-            // case ""
+            case "bc":
+                //left and up
+                j = xa;
+                for(int i = ya; i >= yb; i--)
+                {
+                    field[i][j] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                    j--;
+                }
+                break;
+            case "ca":
+                //only right
+                for(int i = xa; i <= xb; i++)
+                {
+                    field[ya][i] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                }
+                break;
+            case "cb":
+                //right and down
+                break;
+            case "cc":
+                //right and up
+                j = xa;
+                for(int i = ya; i >= yb; i--)
+                {
+                    field[i][j] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                    j++;
+                }
+                break;
+            default:
+                //something went wrong
+                break;
+
         }
     }
 
     public void getTile()
     {
-        
         // System.out.println("Next tile? (x,y)");
         String next = "";
         while(next.indexOf(",") == -1)
