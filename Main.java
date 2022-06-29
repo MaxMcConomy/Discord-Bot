@@ -4,13 +4,14 @@ public class Main
     {
         TicTacToe joe = new TicTacToe();
         joe.makeField();
-        // joe.printField();
+        joe.printField();
         // joe.getTile();
         // joe.getTile();
         // System.out.println();
-        
+        joe.generateWord();
+
         // joe.pointToPoint(6, 4, 6, 7); //ab
-        // joe.printField();
+        joe.printField();
         // joe.pointToPoint(1, 5, 1, 3); //ac
         // joe.printField();
         // joe.pointToPoint(4, 6, 7, 6); //ba
