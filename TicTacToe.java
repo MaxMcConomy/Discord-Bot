@@ -146,14 +146,14 @@ public class TicTacToe
                 //only down
                 for(int i = ya; i <= yb; i++)
                 {
-                    field[i][xa] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                    field[i][xa] = "\u001B[41m" + characters[27] + "\u001B[0m";
                 }
                 break;
             case "ac":
                 //only up
                 for(int i = ya; i >= yb; i--)
                 {
-                    field[i][xa] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                    field[i][xa] = "\u001B[41m" + characters[27] + "\u001B[0m";
                 }
                 break;
             case "ba":
@@ -165,13 +165,19 @@ public class TicTacToe
                 break;
             case "bb":
                 //left and down
+                j = xa;
+                for(int i = ya; i <= yb; i++)
+                {
+                    field[i][j] = "\u001B[43m" + characters[27] + "\u001B[0m";
+                    j--;
+                }
                 break;
             case "bc":
                 //left and up
                 j = xa;
                 for(int i = ya; i >= yb; i--)
                 {
-                    field[i][j] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                    field[i][j] = "\u001B[44m" + characters[27] + "\u001B[0m";
                     j--;
                 }
                 break;
@@ -179,18 +185,24 @@ public class TicTacToe
                 //only right
                 for(int i = xa; i <= xb; i++)
                 {
-                    field[ya][i] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                    field[ya][i] = "\u001B[45m" + characters[27] + "\u001B[0m";
                 }
                 break;
             case "cb":
                 //right and down
+                j = xa;
+                for(int i = ya; i <= yb; i++)
+                {
+                    field[i][j] = "\u001B[46m" + characters[27] + "\u001B[0m";
+                    j++;
+                }
                 break;
             case "cc":
                 //right and up
                 j = xa;
                 for(int i = ya; i >= yb; i--)
                 {
-                    field[i][j] = "\u001B[42m" + characters[27] + "\u001B[0m";
+                    field[i][j] = "\u001B[47m" + characters[27] + "\u001B[0m";
                     j++;
                 }
                 break;
@@ -203,7 +215,6 @@ public class TicTacToe
 
     public void getTile()
     {
-        // System.out.println("Next tile? (x,y)");
         String next = "";
         while(next.indexOf(",") == -1)
         {
