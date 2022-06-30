@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class TicTacToe 
 {
     //TODO can i verify the word with just the start and end?
+    //TODO add a return method to pointToPoint to return all the points a thing has
     int wordNum;
     String[][] field = new String[12][12];
     String[][] wordPoints;
@@ -134,6 +135,7 @@ public class TicTacToe
 
     public void pointToPoint(int xa, int ya, int xb, int yb, int[] values)
     {
+        int[][] points;
         String direction = "";
         if(xa == xb)
         {
@@ -173,6 +175,7 @@ public class TicTacToe
         {
             case "aa":
                 //No movement
+                // points = new int[1];
                 System.out.println("That doesn't go anywhere!");
                 break;
             case "ab":
