@@ -2,16 +2,18 @@ public class Main
 {
     public static void main(String[] args)
     {
+        // for(int i = 0; i < 10; i++){
+        // System.out.println((int) ((Math.random() * (10))));
+        // }
         TicTacToe joe = new TicTacToe();
         joe.makeField();
         joe.printField();
         // joe.getTile();
         // joe.getTile();
         // System.out.println();
-        joe.generateWord();
 
         // joe.pointToPoint(6, 4, 6, 7); //ab
-        joe.printField();
+        // joe.printField();
         // joe.pointToPoint(1, 5, 1, 3); //ac
         // joe.printField();
         // joe.pointToPoint(4, 6, 7, 6); //ba
