@@ -57,7 +57,7 @@ public class TicTacToe
         "  "
     };
 
-    String[] numbersX = // This list will be replaced with discord emotes
+    String[] numbers = // This list will be replaced with discord emotes
     {
         "0",
         "1",
@@ -69,21 +69,6 @@ public class TicTacToe
         "7",
         "8",
         "9",
-        "10"
-    };
-
-    String[] numbersY = // This list will be replaced with discord emotes
-    {
-        " 0",
-        " 1",
-        " 2",
-        " 3",
-        " 4",
-        " 5",
-        " 6",
-        " 7",
-        " 8",
-        " 9",
         "10"
     };
 
@@ -120,11 +105,11 @@ public class TicTacToe
         field[0][0] = "---";
         for(int i = 1; i < 12; i++)
         {
-            field[i][0] = "\u001B[45m" + numbersY[i-1] + " " + "\u001B[0m";
+            field[i][0] = "\u001B[45m" + numbers[i-1] + " " + "\u001B[0m";
         }
         for(int j = 1; j < 12; j++)
         {
-            field[0][j] = "\u001B[45m" + numbersX[j-1] + " " + "\u001B[0m";
+            field[0][j] = "\u001B[45m" + numbers[j-1] + " " + "\u001B[0m";
         }
         for(int i = 0; i < wordNum; i++)
         {
@@ -154,7 +139,7 @@ public class TicTacToe
         // System.out.println(values);
         int startX = random(1, gridSize);
         int startY = random(1, gridSize); 
-        pointToPoint(startX, startY, startX+word.length()-1, startY-word.length()+1, values);
+        // pointToPoint(startX, startY, startX+word.length()-1, startY-word.length()+1, values);
         // System.out.println
     }
 

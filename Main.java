@@ -2,12 +2,15 @@ public class Main
 {
     public static void main(String[] args)
     {
+        Grid field = new Grid(10, 10);
+        field.makeGrid();
+        field.printGrid();
         // for(int i = 0; i < 10; i++){
         // System.out.println((int) ((Math.random() * (10))));
         // }
-        TicTacToe joe = new TicTacToe();
-        joe.makeField();
-        joe.printField();
+        // TicTacToe joe = new TicTacToe();
+        // joe.makeField();
+        // joe.printField();
         // joe.getTile();
         // joe.getTile();
         // System.out.println();
