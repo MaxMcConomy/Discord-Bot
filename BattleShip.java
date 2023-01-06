@@ -45,7 +45,7 @@ public class BattleShip
                     }
                 }
             }
-            // shipPosB = 
+            // shipPosB = balls
         }
     }
 
