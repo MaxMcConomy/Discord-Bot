@@ -1,5 +1,5 @@
 import java.lang.Math;
-import java.util.ArrayList;
+// import java.util.ArrayList;
 public class Grid
 {
     enum direction{
@@ -84,15 +84,18 @@ public class Grid
        }
     }
 
-    public void printGrid()
+    public void printGrid(Boolean showHeader)
     {
         System.out.print("    ");
-        for(int i = 0; i < xSize; i++)
+        if(showHeader == true)
         {
-            System.out.print(numbers[i+1]);
+            for(int i = 0; i < xSize; i++)
+            {
+                System.out.print(numbers[i+1]);
+            }
+            System.out.println();
+            System.out.print("    ");
         }
-        System.out.println();
-        System.out.print("    ");
         for(int i = 0; i < xSize; i++)
         {
             System.out.print(characters[30]);
@@ -100,8 +103,7 @@ public class Grid
         System.out.println();
         for(int i = 0; i < xSize; i++)
         {
-            
-            System.out.print(numbers[i+1]);
+            System.out.print(characters[i]);
             System.out.print(characters[31]);
             for(int f = 0; f < ySize; f++)
             {

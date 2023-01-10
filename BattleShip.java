@@ -3,8 +3,9 @@ import java.util.List;
 
 public class BattleShip
 {
-    Grid shipsA = new Grid(7, 7);    
-    Grid shipsB = new Grid(7, 7);
+    int GRIDSIZE = 7;
+    Grid shipsA = new Grid(GRIDSIZE, GRIDSIZE);    
+    Grid shipsB = new Grid(GRIDSIZE, GRIDSIZE);
     int[][] shipPosA;
     int[][] shipPosB;
 
@@ -38,14 +39,13 @@ public class BattleShip
                 
                 for(int k = 0; k < test.length; k++)
                 {
-                    List posList = Arrays.asList(shipPosB);
+                    List<int[]> posList = Arrays.asList(shipPosB);
                     if(posList.contains(test[i]))
                     {
                         inUse = true;
                     }
                 }
             }
-            // shipPosB = balls
         }
     }
 
@@ -53,4 +53,10 @@ public class BattleShip
     {
 
     }
+
+    public void printShips()
+    {
+        shipsA.printGrid(true);
+        shipsB.printGrid(false);
+    }   
 }

@@ -17,8 +17,12 @@ public class Main
         // field.printGrid();
         // // System.out.println(field.getTile(9, 1));
 
-        int[] test1 = {1, 2};
-        int[][] test2 = {{1, 2}, {3, 4}};
-        System.out.println(Arrays.equals(test1, test2[0]));
+        // int[] test1 = {1, 2};
+        // int[][] test2 = {{1, 2}, {3, 4}};
+        // System.out.println(Arrays.equals(test1, test2[0]));
+
+        BattleShip ship = new BattleShip();
+        ship.makeBotShips();
+        ship.printShips();
     }
 }
